@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+
+    <script>
+        /*iconsole.log(typeof true); 
+        console.log(3 < 4);
+
+        const age = 20;
+
+        f(age >= 16){
+            console.log('You can drive');
+        } else if (age >= 14) {
+            console.log("Almost dude");
+        } else {
+            console.log("Probably too soon to drive");
+        }*/
+
+        //Truthy or falsy
+
+        // Ternary Operator ?:
+        /*
+        let result;
+
+        if(condition){
+        result = 'truthy';
+        }else {
+        result = 'falsy'
+        }
+        */
+        const result = 1 ? 'truthy' : 'falsy';
+        console.log(result);
+
+        const result1 = 0 ? 'truthy' : 'falsy';
+        console.log(result1);
+
+        // Guard Operator &&
+        /*
+        let message
+
+        if(condition){
+        message = 'hello';
+        }
+        */
+        const message = 0 && 'hello';
+        console.log(message);
+
+        const message1 = 5 && 'hello';
+        console.log(message1);
+
+        //Default Operator
+        /*
+        let currency;
+
+        if(!condition){
+        currency = 'USD';
+        }
+        */
+
+        const currency = 'USD' || 'EUR'
+        console.log(currency);
+
+        const currency1 = undefined || 'EUR'
+        console.log(currency1);
+    </script>
+</body>
+</html>
