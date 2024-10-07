@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 Exercise 2 - Amusement Park</title>
+</head>
+<body>
+    <h1>Amusement Park</h1>
+<script>
+    const age = 25;
+    const isHoliday = false;
+
+    if((age <= 6 || age >= 65) && !isHoliday) {
+        console.log(`You are ${age} and it is not the holiday season, you get a Discount`);
+    } else if((age <= 6 || age >= 65) && isHoliday) {
+        console.log(`You are ${age} and it is the holiday season. Sorry No Discount`);
+    } else {
+        console.log(`Sorry you are ${age}. No Discount for you.`);
+    }
+</script>
+</body>
+</html>
