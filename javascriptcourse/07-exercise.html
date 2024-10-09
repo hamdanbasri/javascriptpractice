@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 Exercise</title>
+</head>
+<body>
+    <h1>07 Exercise</h1>
+    <hr>
+    <h2>Convert Temperature</h2>
+    <h3>Formula</h3>
+    <p>Fahrenheit = (Celcius * 9/5) + 32</p>
+    <p>Celcius = (Fahrenheit -32) * 5/9</p>
+    <button onclick="
+    convertTemperature(86, 'F');
+    ">Convert Temperature to Celcius: 86F</button>
+
+    <button onclick="
+    convertTemperature(25, 'C');
+    ">Convert Temperature to Fahrenheit: 25C</button>
+
+    <hr>
+
+    <h2>Convert Length</h2>
+    <h3>Conversion Values</h3>
+    <p>1 mile = 1.6km approximately</p>
+    <p>1 mile = 5280ft</p>
+    <p>1 km = 3281ft</p>
+    <button onclick="
+    alert(convertLength(50, 'miles', 'km'));
+    ">50 Miles to km</button>
+
+    <button onclick="
+    alert(convertLength(32, 'km', 'miles'));
+    ">32 km to Miles</button>
+
+    <button onclick="    
+    alert(convertLength(50, 'km', 'km'));
+    ">50 Km to km</button>
+
+    <button onclick="
+    alert(convertLength(5, 'miles', 'km'));
+    ">5 Miles to km</button>
+
+    <button onclick="   
+    alert(convertLength(5, 'miles', 'ft'));
+    ">5 Miles to ft</button>
+
+    <button onclick="  
+    alert(convertLength(5, 'km', 'ft'));
+    ">5 km to ft</button>
+
+
+
+
+<script>
+    function greet(name){
+        if(!name) {
+            console.log('Hi there');
+        }else {
+        console.log(`Hello ${name}`);
+        }
+    }
+    
+    greet('Hamdan');
+
+    function convertToFahrenheit(number){
+        let fahrenheit = (number * 9 / 5) + 32;
+        //console.log(`${number}C to fahrenheit is: ` + fahrenheit + 'F.');
+        return fahrenheit;
+    }
+
+    //convertToFahrenheit(25);
+
+    function convertToCelcius(number){
+        let celcius = (number - 32) * 5 / 9;
+        //console.log(`${number}F to celcius is: `+ celcius + 'C.');
+        return celcius;
+    }
+
+    //convertToCelcius(86);
+
+    function convertTemperature(degrees, unit){
+        let convertedUnit = '';
+        if (unit == 'C') {
+            degrees = convertToFahrenheit(degrees);
+            convertedUnit = 'F';
+        } else {
+            degrees = convertToCelcius(degrees);
+            convertedUnit = 'C';
+        }
+        alert(degrees + convertedUnit);
+    }
+
+    //convertTemperature(86, 'F');
+
+    function convertLength(length, from, to){
+        if (from !== 'km' && from !== 'miles' && from !== 'ft') {
+          return `Invalid unit: ${from}`;
+        } else if (to !== 'km' && to !== 'miles' && to !== 'ft') {
+          return `Invalid unit: ${to}`;
+        }
+
+        if(from === 'km' && to === 'miles'){
+            return `${length / 1.6} ${to}`;
+        
+        } else if (from === 'miles' && to === 'km'){
+            return `${length * 1.6} ${to}`;
+        
+        } else if (from === 'km' && to === 'ft'){
+            return `${length * 3281} ${to}`;
+        
+        } else if (from === 'miles' && to === 'ft'){
+            return `${length * 5280} ${to}`;
+        
+        } else if (from === to){
+            return `${length} ${to}`;
+        }
+    }
+
+    console.log(convertLength(50, 'miles', 'km'));
+    console.log(convertLength(32, 'km', 'miles'));
+    console.log(convertLength(50, 'km', 'km'));
+    
+    console.log(convertLength(5, 'miles', 'km'));
+    console.log(convertLength(5, 'miles', 'ft'));
+    console.log(convertLength(5, 'km', 'ft'));
+
+    console.log(convertLength(5, 'lbs', 'lbs'));
+    
+</script>
+</body>
+</html>
