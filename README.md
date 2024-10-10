@@ -13,7 +13,7 @@ Projects:
 ## Calculator
 I created my first calculator based on the following tutorial: [Build this JS calculator in 15 minutes! by Bro Code](https://youtu.be/I5kj-YsmWjM?si=A1lowZwcUqO-Lxkd)
 <div align="center">
-<img src="Calculator/images/calculator.png" alt="Calculator" width="250" height="300">
+<img src="https://github.com/hamdanbasri/javascriptpractice/blob/main/Calculator/images/Calculator.png" alt="Calculator" width="250" height="300">
 </div>
 
 <hr>
