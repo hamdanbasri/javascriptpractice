@@ -1,3 +1,7 @@
+# Notes
+The notes below are for my own personal reference. This is to help me understand
+the terms and the use of the syntax. 
+
 # Template Strings
 "`Hello`"  
 The method below is called **Interpolation**  
