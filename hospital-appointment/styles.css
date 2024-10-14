@@ -1,0 +1,32 @@
+.mainDisplay{
+  display: grid;
+  grid-template-areas: 
+    'displayInfo displayInfo internalDisplay internalDisplay internalDisplay internalDisplay'
+    'displayInfo displayInfo internalDisplay internalDisplay internalDisplay internalDisplay'
+  ;
+  grid-template-columns: 1fr 5fr;
+  background-color: #2d8142;
+  border-radius: 25px;
+}
+
+
+#displayInfo{
+  background-color:cornflowerblue;
+
+  color: white;
+
+  border-radius: 25px;
+  padding: 20px;
+  margin: 5px;
+  row-gap: 0px;
+}
+
+.internalDisplay{
+  background-color: #d0f321;
+  border-radius: 25px;
+  columns: 20px;
+}
+
+#waitingNumber{
+  font-size: 2rem;
+}
