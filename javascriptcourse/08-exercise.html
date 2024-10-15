@@ -21,6 +21,13 @@
       ['delivery-time']: '3 days'
     };
 
+    product3 = {
+      name: 'Baseball',
+      price: 1095,
+      ['delivery-time']: '3 days'
+    };
+    
+
     product1.price += 500;
     //console.log(product1);
 
@@ -34,6 +41,20 @@
     }
 
     console.log(comparePrice(product1, product2));
+
+    function isSameProduct(product1, product2) {
+      return (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        );
+    }
+
+    console.log(isSameProduct(product1, product2));
+    console.log(isSameProduct(product3, product2));
+    console.log('Good Morning'.toLowerCase());
+    console.log('test'.repeat(3));
+
+
   </script>
 </body>
 </html>
