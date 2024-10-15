@@ -28,3 +28,10 @@ Progress for each exercise from the tutorial can be found [here](javascriptcours
 10 October 2024
 - I reached section 7 of the tutorial which is Functions. I find this tutorial is easy to understand and very well explained.
 
+16 October 2024
+- I just finished section 8 of the tutorial and it is about Objects, JSON and local storage.
+- The local storage is very useful for storing and retrieving data locally.
+- I now have an updated version of the Coin Flip Game which stores the value of the score.
+- I also decided to show my own version of the games in my site here: [113](https://hamdanbasri.github.io/113/Javascript/javascript.html)
+- They are rough but I am quite happy with the progress so far.
+
