@@ -1,32 +1,80 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(21, 21, 21);
+  padding: 15px;
+  color: white;
+}
+
 .mainDisplay{
   display: grid;
+  grid-template-rows: 200px 5fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
-    'displayInfo displayInfo internalDisplay internalDisplay internalDisplay internalDisplay'
-    'displayInfo displayInfo internalDisplay internalDisplay internalDisplay internalDisplay'
-  ;
-  grid-template-columns: 1fr 5fr;
-  background-color: #2d8142;
+  'main maintop secondarytop'
+  'main mainbottom mainbottom'
+  'footer footer footer';
   border-radius: 25px;
+  height: 600px;
+  background-color: rgb(29, 28, 28);
 }
 
 
 #displayInfo{
-  background-color:cornflowerblue;
-
+  grid-area: main;
+  background-color:rgb(44, 43, 43);
   color: white;
-
   border-radius: 25px;
   padding: 20px;
-  margin: 5px;
-  row-gap: 0px;
+  margin: 10px;
 }
 
-.internalDisplay{
-  background-color: #d0f321;
+#numberPrimaryDisplay{
+  grid-area: maintop;
+  background-color: rgb(44, 43, 43);
+  color: white;
   border-radius: 25px;
-  columns: 20px;
+  padding: 20px;
+  margin: 10px;
 }
 
-#waitingNumber{
-  font-size: 2rem;
+#numberSecondDisplay{
+  grid-area: secondarytop;
+  background-color: rgb(44, 43, 43);
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
 }
+
+#taskDisplay{
+  grid-area: mainbottom;
+  background-color: rgb(44, 43, 43);
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+}
+
+#noteToPatient{
+  grid-area: footer;
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;
+}
+
+#currentNumber, #waitingNumber{
+  font-size: 2rem;
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;
+}
+
+.footer{
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;
+}
+
+
+
+

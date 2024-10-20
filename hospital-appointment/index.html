@@ -10,6 +10,8 @@
 </head>
 
 <body>
+
+  <h1>Hospital Appointment System</h1>
   <div class="mainDisplay">
 
     <div id="displayInfo">
@@ -18,27 +20,55 @@
       Completion %
     </div>
 
-    <div id="internalDisplay">
-      <p>Current Number</p>
-      <p id="waitingNumber">250</p>
-      <p>Number</p>
-      <p id="waitingNumber">250</p>
-    </div>
-
-    <div id="internalDisplay">
-      <h1>Checklist</h1>
-      <div class="list-group">
-        <button>Registered at Kaunter Hasil</button>
-        <button>Pending Payment</button>
-        <button>Payment Completed</button>
-        <button>Receipt Provided</button>
-        <button>Wait for number: 231</button>
-        <button>Check up in session</button>
-        <button>Checkup Completed</button>
-        <button>Next Appointment Date: none</button>
+    <div id="numberPrimaryDisplay">
+      <div id="patientNumber">
+        <p>Current Number</p>
+        <p id="currentNumber">80</p>
       </div>
     </div>
 
+    <div id="numberSecondDisplay">
+      <div id="patientNumber">
+      <p>Your Number</p>
+      <p id="waitingNumber">Please register at Kaunter Hasil</p>
+      <p id="roomNumber"></p>
+      </div>
+    </div>
+
+    <div id="taskDisplay">
+      <h1>Checklist</h1>
+      <div class="list-group">
+        <button id="registerButton" onclick="Register()">Registered at Kaunter Hasil</button>
+        <button id="pendingPayment" onclick="PaymentInfo()" disabled>Pending Payment</button>
+        <button id="receipt" onclick="Receipt()" disabled>Receipt</button>
+        <p id="waitingNumberButton">Wait for number: Unassigned</p>
+        <p id="checkupInSession">Check up in session</p>
+        <p id="checkupCompleted">Checkup Completed</p>
+        <p>Next Appointment Date: -</p>
+      </div>
+    </div>
+
+    <div id="noteToPatient">
+      <p>Please be patient while waiting for your number</p>
+    </div>
+
+  </div>
+
+  <div class="controlPanel">
+    <h1>Control Panel</h1>
+      <div class="list-group">
+        <button>Patient Registered</button>
+        <button>Payment Requested</button>
+        <button>Payment Completed</button>
+        <button>Receipt</button>
+        <button onclick="CallForNextPatient()">Call For Next Patient</button>
+        <button onclick="CheckupCompleted()">Checkup Completed</button>
+        <button>Set Appointment Date</button>
+      </div>
+  </div>
+
+  <div class="footer">
+  <p>2024 Hospital Appointment System</p>
   </div>
 
   <script src="script.js"></script>
