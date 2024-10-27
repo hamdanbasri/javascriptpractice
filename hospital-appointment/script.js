@@ -67,6 +67,7 @@ function CheckForRoomNumber() {
   if (patientNumber === currentNumber) {
     document.getElementById('roomNumber').innerText = `Proceed to room number: ${roomNumber}`;
     document.getElementById('checkupInSession').style.color = 'green';
+    alert(`Proceed to room number: ${roomNumber}`);
   }
 
   console.log(roomNumber);
@@ -74,6 +75,7 @@ function CheckForRoomNumber() {
 
 function CheckupCompleted(){
   document.getElementById('checkupCompleted').style.color = 'green';
+  alert('Checkup Completed.');
   CallForNextPatient();
 }
 

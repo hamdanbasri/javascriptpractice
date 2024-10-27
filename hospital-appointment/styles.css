@@ -5,7 +5,51 @@ body {
   color: white;
 }
 
+.bodyDisplay{
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 4fr 2fr;
+  grid-template-areas:
+  'bodyheader login'
+  'outerdisplay outerdisplay';
+  background-color: rgb(29, 28, 28);
+  border-radius: 25px;
+}
+
+.bodyHeader{
+  grid-area: bodyheader;
+  display: flex;
+  align-items: center;
+}
+
+#loginPanel{
+  grid-area: login;
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;
+}
+
+.outerDisplay{
+  grid-area: outerdisplay;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+  'sidepanel maindisplay';
+  border-radius: 25px;
+}
+
+.sidePanel{
+  grid-area: sidepanel;
+  background-color:rgb(44, 43, 43);
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+}
+
 .mainDisplay{
+  grid-area: maindisplay;
   display: grid;
   grid-template-rows: 200px 5fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -15,8 +59,8 @@ body {
   'footer footer footer';
   border-radius: 25px;
   height: 600px;
-  background-color: rgb(29, 28, 28);
 }
+
 
 
 #displayInfo{
