@@ -4,104 +4,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hospital Appointment</title>
+  <title>Hospital Manager</title>
   <!-- CSS STYLESHEET -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-  <div class="bodyDisplay">
+  <div class="indexBody">
 
-    <div class="bodyHeader">
-      <h1>Hospital Appointment System</h1>
+    <div id="indexMain">
+      <h1>Hospital Manager</h1>
     </div>
 
-    <div id="loginPanel">
-        <label for="fname">User ID:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Password:</label><br>
-        <input type="text" id="lname" name="lname">
-      <button>Register</button>
-      <button>Log In</button>
-    </div>
-
-    <div class="outerDisplay">
-      <div class="mainDisplay">
-
-        <div id="displayInfo">
-          <h2>Patient Info</h2>
-          <p id="patientInfo">Patient Info</p>
-          Completion %
-        </div>
-
-        <div id="numberPrimaryDisplay">
-          <div id="patientNumber">
-            <p>Current Number</p>
-            <p id="currentNumber">80</p>
-          </div>
-        </div>
-
-        <div id="numberSecondDisplay">
-          <div id="patientNumber">
-            <p>Your Number</p>
-            <p id="waitingNumber">Please register at Kaunter Hasil</p>
-            <p id="roomNumber"></p>
-          </div>
-        </div>
-
-        <div id="taskDisplay">
-          <h1>Checklist</h1>
-          <div class="list-group">
-            <button id="registerButton" onclick="Register()">Register at Kaunter Hasil</button>
-            <button id="pendingPayment" onclick="PaymentInfo()" disabled>Pending Payment</button>
-            <button id="receipt" onclick="Receipt()" disabled>Receipt</button>
-            <p id="waitingNumberButton">Wait for number: Unassigned</p>
-            <p id="checkupInSession">Check up in session</p>
-            <p id="checkupCompleted">Checkup Completed</p>
-            <p>Next Appointment Date: -</p>
-          </div>
-        </div>
-
-        <div id="noteToPatient">
-          <p>Please be patient while waiting for your number</p>
-        </div>
-
+    <div id="indexLogin">
+      <h2>Welcome</h2>
+      <input type="text" id="fname" name="fname" placeholder="User ID"><br>
+      <input type="password" id="lname" name="lname" placeholder="Password">
+      <div class="button-container">
+          <button disabled>Register</button>
+          <button onclick="openSelectionPage()">Log In</button>
       </div>
+  </div>
+  
 
-      <div class="sidePanel">
-        <ul>
-          <li><button>Health Records</button></li>
-          <li><button>Appointments</button></li>
-          <li><button>History</button></li>
-          <li><button>Payment</button></li>
-          <li><button>Pink Book</button></li>
-        </ul>
-      </div>
-
-    </div>
   </div>
 
-  <div class="footer">
-    <p>2024 Hospital Appointment System</p>
+  <div id="indexFooter">
+    <p>© 2024 Hospital Manager by Hamdan Basri</p>
   </div>
 
-  <div class="controlPanel">
-    <h1>Control Panel</h1>
-    <div class="list-group">
-      <button>Patient Registered</button>
-      <button>Payment Requested</button>
-      <button>Payment Completed</button>
-      <button>Receipt</button>
-      <button onclick="CallForNextPatient()">Call For Next Patient</button>
-      <button onclick="CheckupCompleted()">Checkup Completed</button>
-      <button>Set Appointment Date</button>
-    </div>
-  </div>
-
-
-
-  <script src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>

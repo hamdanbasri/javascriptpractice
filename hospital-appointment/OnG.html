@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospital Manager - O&G</title>
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="bodyDisplay">
+
+    <div class="bodyHeader">
+      <a href="selectionpage.html" id="home-link">
+        <h1>Obstetrics and Gynaecology</h1>
+      </a>
+    </div>
+
+    <div id="loginPanel">
+      <button onclick="openLogin()">Log Out</button>
+    </div>
+
+  </div>
+
+  <div class="mainDisplay">
+
+    <div id="displayInfo">
+      <h2>Patient Info</h2>
+      <p id="patientInfo">Patient Info</p>
+      Completion %
+    </div>
+
+    <div id="numberPrimaryDisplay">
+      <div id="patientNumber">
+        <p>Current Number</p>
+        <p id="currentNumber">80</p>
+      </div>
+    </div>
+
+    <div id="numberSecondDisplay">
+      <div id="patientNumber">
+        <p>Your Number</p>
+        <p id="waitingNumber">Please register at Kaunter Hasil</p>
+        <p id="roomNumber"></p>
+      </div>
+    </div>
+
+    <div id="taskDisplay">
+      <h1>Checklist</h1>
+      <div class="list-group">
+        <button id="registerButton" onclick="Register()">Register at Kaunter Hasil</button>
+        <button id="pendingPayment" onclick="PaymentInfo()" disabled>Pending Payment</button>
+        <button id="receipt" onclick="Receipt()" disabled>Receipt</button>
+        <p id="waitingNumberButton">Wait for number: Unassigned</p>
+        <p id="checkupInSession">Check up in session</p>
+        <p id="checkupCompleted">Checkup Completed</p>
+        <p>Next Appointment Date: -</p>
+      </div>
+    </div>
+
+    <div id="noteToPatient">
+      <p>Please be patient while waiting for your number</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>© 2024 Hospital Manager by Hamdan Basri</p>
+  </div>
+
+  <div class="controlPanel">
+    <h1>Control Panel | Staff</h1>
+    <div class="list-group">
+      <button disabled>Patient Registered</button>
+      <button disabled>Payment Requested</button>
+      <button disabled>Payment Completed</button>
+      <button disabled>Receipt</button>
+      <button onclick="CallForNextPatient()">Call For Next Patient</button>
+      <button onclick="CheckupCompleted()">Checkup Completed</button>
+      <button disabled>Set Appointment Date</button>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

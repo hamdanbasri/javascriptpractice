@@ -80,3 +80,9 @@ function CheckupCompleted(){
 }
 
 PatientInfo();
+
+function openLogin() {
+  window.location.href = 'index.html';
+  console.log('Hello');
+}
+
