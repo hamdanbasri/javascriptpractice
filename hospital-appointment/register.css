@@ -11,29 +11,37 @@ body {
   text-decoration: none;
 }
 
-.indexBody{
+.registerBody{
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 3fr 3fr;
   grid-template-areas: 
-  'indexMain indexLogin';
+  'userRegistration addressInfo';
   background-color: rgb(29, 28, 28);
   border-radius: 25px;
   height: 100vh;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-#indexMain{
-  display: flex;
-  justify-content: center; /* Horizontal alignment */
-  align-items: center;
-}
-
 h2 {
   color: rgb(100, 255, 49);
 }
 
-#indexLogin {
+#userRegistration {
+  background-color: rgb(44, 43, 43);
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 5px; /* 10px gap between input fields and buttons */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically (if height is defined) */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#addressInfo {
   background-color: rgb(44, 43, 43);
   color: white;
   border-radius: 25px;
@@ -77,4 +85,36 @@ input[type="password"]::placeholder {
   display: flex;
   justify-content: center; /* Horizontal alignment */
   align-items: center;
+}
+
+/* Center the upload container */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px dotted #ccc;
+  border-radius: 8px;
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#photo-upload {
+  display: none; /* Hide the default input */
+}
+
+/* Optional: hover effect for label */
+.upload-label:hover {
+  background-color: #45a049;
 }

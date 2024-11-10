@@ -39,6 +39,8 @@ function PaymentInfo(){
   pendingPaymentButton.disabled = true;
   receiptButton.disabled = false;
 
+  window.location.href = 'paymentpage.html';
+
   PatientNumber();
 }
 
@@ -85,4 +87,5 @@ function openLogin() {
   window.location.href = 'index.html';
   console.log('Hello');
 }
+
 
